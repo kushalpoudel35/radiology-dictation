@@ -1,3 +1,4 @@
+import os
 import numpy as np, sounddevice as sd, pyperclip
 from transformers import pipeline
 
@@ -16,6 +17,7 @@ while True:
     if cmd == "c":
         report = []
         pyperclip.copy("")
+        os.system("cls" if os.name == "nt" else "clear")
         print("Report cleared.")
         continue
     if cmd == "s":
