@@ -8,12 +8,12 @@ report = []  # all dictations so far
 
 while True:
     cmd = input(
-        "\n[Enter] = start dictating | n = new report (clear) | s = show report | q = quit : "
+        "\n[Enter] = start dictating | c = clear & start new report | s = show report | q = quit : "
     ).strip().lower()
 
     if cmd == "q":
         break
-    if cmd == "n":
+    if cmd == "c":
         report = []
         pyperclip.copy("")
         print("Report cleared.")
