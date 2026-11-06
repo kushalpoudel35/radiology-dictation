@@ -19,7 +19,7 @@ mkdir C:\medasr
 cd C:\medasr
 python -m venv env
 env\Scripts\activate
-pip install "transformers>=5.0.0" torch librosa sounddevice numpy pyperclip huggingface_hub
+pip install "transformers>=5.0.0" torch librosa sounddevice numpy pyperclip huggingface_hub gradio
 ```
 
 This takes a few minutes. Then log in:
@@ -31,12 +31,12 @@ Paste your token when asked. Nothing shows as you paste, which is normal.
 
 ## Step 4: Create the dictation script
 
-Copy the `dictate.py` file into `C:\medasr` folder.
+Copy the `dictate.py` and `dictate_web.py` files into `C:\medasr` folder.
 
 ## Step 5: Run it
-- Copy the `MedASR.bat` file into `C:\medasr` folder.
-- Double click to run it.
-- The first run downloads the model, so wait for “Loading model...”. Then press Enter, speak, press Enter again, and the text appears and is copied to the clipboard. As long as you repeat this, the text is added to the running report.
+- Copy the `MedASR.bat` and `MedASR_web.bat` files into `C:\medasr` folder.
+- Double click `MedASR.bat` to run the model in terminal interface, or `MedASR_web.bat` to run it in webUI interface.
+- (For terminal interface:) The first run downloads the model, so wait for “Loading model...”. Then press Enter, speak, press Enter again, and the text appears and is copied to the clipboard. As long as you repeat this, the text is added to the running report.
 - The clipboard always holds the whole report so far, with sections separated by a blank line. So you can paste once at the end, or after each section.
 - Type n then Enter to start a new report. Do this between patients so reports don’t mix.
 - Type s then Enter to print the full report.
